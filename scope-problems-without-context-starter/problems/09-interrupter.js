@@ -16,7 +16,25 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 ***********************************************************************/
 
-// your code here!
+const interrupter = (interruptingWord) => {
+  return (func = (string) => {
+    let array = string.split(' ');
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+      const ele = array[i];
+      if (i === array.length - 1) {
+        newArray.push(ele);
+      } else {
+        newArray.push(ele);
+        newArray.push(interruptingWord);
+      }
+    }
+    return newArray.join(' ');
+  });
+};
+let rudePerson = interrupter('what'); // => returns a function
+console.log(rudePerson('how are you doing on this fine day')); // prints "how what are what you"
+console.log(rudePerson('I like pie')); // prints "I what like what pie"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
