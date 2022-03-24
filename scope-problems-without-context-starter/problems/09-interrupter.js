@@ -32,9 +32,6 @@ const interrupter = (interruptingWord) => {
     return newArray.join(' ');
   });
 };
-let rudePerson = interrupter('what'); // => returns a function
-console.log(rudePerson('how are you doing on this fine day')); // prints "how what are what you"
-console.log(rudePerson('I like pie')); // prints "I what like what pie"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
