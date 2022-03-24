@@ -11,7 +11,7 @@ invoked below:
 Example 1:
   console.log(countDownTimer(0)); // prints "Happy New Year!"
 
-Example 3:
+Example 2:
   let oneDay = countDownTimer(1); // returns a function
   console.log(oneDay()); // prints "Happy New Year!"
 
@@ -28,8 +28,18 @@ Example 4:
 
 ***********************************************************************/
 
-// your code here
-
+const countDownTimer = (n) => {
+  if (n > 0) {
+    return (nameless = () => {
+      n--;
+      if (n === 0) {
+        return 'Happy New Year!';
+      }
+    });
+  } else {
+    return 'Happy New Year!';
+  }
+};
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
